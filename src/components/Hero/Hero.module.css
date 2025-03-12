@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 10%; /* Reduced from 50px */
-  margin-top: 100px; /* Added for better spacing */
+  margin: 30px 10%;
+  margin-top: 120px;
   position: relative;
 }
 
@@ -14,22 +14,48 @@
   flex-direction: column;
   align-items: flex-start;
   color: var(--color-text);
+  max-width: 600px;
 }
 
 .title {
-  font-size: 3rem; /* Unchanged as requested */
+  font-size: 3rem;
   font-weight: 900;
-  margin-bottom: 15px; /* Reduced from 20px */
+  margin-bottom: 10px;
   font-family: var(--font-roboto);
-  background: linear-gradient(90deg, var(--color-text) 70%, rgba(255, 255, 255, 0) 120%);
+  line-height: 1.1; /* Tighter line height for stacking */
+}
+
+.name {
+  display: block; /* Allow stacking */
+}
+
+.firstName,
+.lastName {
+  display: block; /* Stack vertically */
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 50%,
+    var(--color-secondary) 100%
+  );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
-.description {
-  font-size: 1.2rem; /* Reduced from 1.5rem */
+.typedText {
+  font-size: 1.5rem;
   font-family: var(--font-roboto);
-  margin-bottom: 20px; /* Reduced from 30px */
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 15px;
+  min-height: 2rem;
+  border-right: 2px solid var(--color-secondary);
+  animation: blink 0.7s infinite;
+}
+
+.description {
+  font-size: 1.1rem;
+  font-family: var(--font-roboto);
+  margin-bottom: 20px;
 }
 
 .contactBtn {
@@ -37,32 +63,26 @@
   background-color: var(--color-primary);
   color: var(--color-text);
   border-radius: 50px;
-  font-size: 1rem; /* Reduced from 1.2rem */
+  font-size: 1rem;
   font-weight: 600;
-  padding: 12px 20px; /* Reduced from 15px 25px */
-  margin-right: 8px; /* Reduced from 10px */
+  padding: 12px 20px;
+  margin-right: 8px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid var(--color-primary); /* Added for better definition */
+  border: 1px solid var(--color-primary);
 }
 
 .contactBtn:hover {
   background-color: var(--color-primary-hover);
-  color: var(--color-bg); /* Better contrast on hover */
-  transform: translateY(-2px); /* Subtle lift effect */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added shadow */
-}
-
-.imageWrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  color: var(--color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 72, 255, 0.3);
 }
 
 .heroImg {
   width: 100%;
   border-radius: 50%;
-  max-width: 300px; /* Reduced from 450px */
-  padding: 40px; /* Reduced from 60px */
+  max-width: 300px;
+  padding: 40px;
   animation: floating 3s infinite ease-in-out;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -71,19 +91,44 @@
 }
 
 .buttonsContainer {
-  display: flex; /* Fixed quotes */
-  flex-direction: row; /* Fixed quotes */
-  gap: 15px; /* Reduced from 20px */
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.topBlur,
+.bottomBlur {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(107, 72, 255, 0.2);
+  filter: blur(70px);
+  z-index: -1;
+}
+
+.topBlur {
+  top: -100px;
+  left: -100px;
+}
+
+.bottomBlur {
+  bottom: -100px;
+  right: -100px;
 }
 
 @keyframes floating {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); } /* Reduced from 10px */
+  50% { transform: translateY(8px); }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 @media (max-width: 830px) {
   .container {
-    margin: 20px 5%; /* Adjusted for mobile */
+    margin: 20px 5%;
     flex-direction: column-reverse;
     align-items: center;
     margin-top: 100px;
@@ -91,30 +136,44 @@
 
   .content {
     align-items: center;
-    text-align: center; /* Changed to center for mobile readability */
+    text-align: center;
+    max-width: 100%;
   }
 
   .title {
-    font-size: 3rem; /* Kept as requested */
+    font-size: 2rem; /* Reduced from 2.5rem for mobile */
+  }
+
+  .name {
+    margin-left: 0; /* Center alignment removes need for margin */
+  }
+
+  .firstName,
+  .lastName {
+    font-size: 2.5rem; /* Smaller than title for mobile */
+  }
+
+  .typedText {
+    font-size: 1.1rem; /* Adjusted for mobile */
   }
 
   .description {
-    font-size: 1rem; /* Further reduced for mobile */
-  }
-
-  .contactBtn {
-    padding: 10px 18px; /* Adjusted for mobile */
     font-size: 0.9rem; /* Adjusted for mobile */
   }
 
+  .contactBtn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
   .heroImg {
-    max-width: 200px; /* Further reduced for mobile */
-    padding: 20px; /* Adjusted for mobile */
+    max-width: 200px;
+    padding: 20px;
   }
 
   .buttonsContainer {
-    flex-direction: column; /* Stack buttons on mobile */
-    gap: 10px; /* Adjusted for mobile */
-    width: 100%; /* Full width for better spacing */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
   }
 }
