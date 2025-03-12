@@ -83,6 +83,7 @@
       margin: 0px 5%;
     flex-direction: column-reverse;
     align-items: center;
+    margin: 10px 10%;
   }
 
   .content {
