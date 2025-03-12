@@ -5,10 +5,10 @@ import { getImageUrl } from "../../utils";
 export const Hero = () => {
   const [typedText, setTypedText] = useState("");
   const roles = [
-    "Développeur Full Stack",
-    "Concepteur Web",
-    "Codeur Créatif",
-    "Passionné de Technologie",
+    "Développeuse Full Stack",
+    "Conceptrice Web",
+    "Codeuse Créative",
+    "Passionnée de Technologie",
   ];
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
