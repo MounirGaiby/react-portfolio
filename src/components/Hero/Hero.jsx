@@ -7,14 +7,20 @@ export const Hero = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Hi, I'm Ada</h1>
+        <h1 className={styles.title}>Bonjour, Je suis Fatima Ezzahra BAAMAR</h1>
         <p className={styles.description}>
-          I'm a full-stack developer with 5 years of experience using React and
-          NodeJS. Reach out if you'd like to learn more!
+          Étudiante en Développement Digital, option Web Full-Stack à l'ISFO Casablanca. 
+          Je recherche un stage d'un mois à partir d'avril 2025. Passionnée par les nouvelles 
+          technologies, j'ai acquis des compétences solides en front-end et back-end.
         </p>
-        <a href="mailto:myemail@email.com" className={styles.contactBtn}>
-          Contact Me
-        </a>
+        <div className={styles.buttonsContainer}>
+          <a href="mailto:baamarfatimaezzahra@gmail.com" className={styles.contactBtn}>
+            Contacter Moi
+          </a>
+          <a href="/assets/hero/heroResume.pdf" className={styles.contactBtn} target="_blank" rel="noreferrer">
+            Mon CV
+          </a>
+        </div>
       </div>
       <img
         src={getImageUrl("hero/heroImage.png")}

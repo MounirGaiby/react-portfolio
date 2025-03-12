@@ -18,7 +18,7 @@
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 14px;
 }
 
@@ -26,6 +26,7 @@
   width: 45%;
   display: flex;
   flex-wrap: wrap;
+  padding: 40px;
   gap: 37px;
 }
 

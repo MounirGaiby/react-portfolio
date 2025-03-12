@@ -1,26 +1,51 @@
 [
   {
-    "title": "Project A",
+    "title": "Plateforme de Rencontre pour les Lauréats de l’OFPPT (Hackathon ISGI 2024)",
     "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "description": "Ce site est une plateforme de mise en réseau dédiée aux anciens lauréats de l’OFPPT. Il permet aux membres de retrouver leurs anciens collègues, d’étendre leur réseau professionnel et de partager des opportunités de carrière.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "PHP",
+      "MySQL",
+      "MongoDB",
+      "PostgreSQL",
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Jira",
+      "Scrum",
+      "jQuery",
+      "Bootstrap",
+      "Laravel"
+    ],
+    "tasks": [
+      "Système d’inscription et de connexion",
+      "Page de recherche de lauréats",
+      "Profils utilisateurs",
+      "Messagerie interne",
+      "Fil d’actualité"
+    ]
   },
   {
-    "title": "Project B",
+    "title": "Agence de Voyage",
     "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "description": "Ce site permet d’organiser des voyages, soit en individuel, soit en groupe. L’objectif est de rendre l’expérience immersive et engageante en mettant en avant des destinations uniques et en permettant une communication fluide entre voyageurs.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "Bootstrap",
+      "PHP",
+      "phpMyAdmin"
+    ],
+    "tasks": [
+      "Intégration HTML/CSS",
+      "Système de réservation",
+      "Chat pour la coordination entre voyageurs"
+    ]
   }
 ]

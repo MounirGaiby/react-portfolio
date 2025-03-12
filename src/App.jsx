@@ -9,12 +9,14 @@ import { Projects } from "./components/Projects/Projects";
 function App() {
   return (
     <div className={styles.App}>
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+      <main className={styles.main}>
+        <Navbar />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
     </div>
   );
 }

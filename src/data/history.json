@@ -1,29 +1,35 @@
 [
   {
-    "role": "Software Engineer",
-    "organisation": "Google",
-    "startDate": "Sept, 2022",
-    "endDate": "Present",
-    "experiences": ["Worked on Google Maps", "Reduced load times by 50%"],
-    "imageSrc": "history/google.png"
-  },
-  {
-    "role": "UI Designer",
-    "organisation": "Mirosoft",
-    "startDate": "Aug, 2021",
-    "endDate": "Aug, 2022",
-    "experiences": ["Worked on Windows 11", "Designed the control panel"],
-    "imageSrc": "history/microsoft.png"
-  },
-  {
-    "role": "SWE Intern",
-    "organisation": "Netflix",
-    "startDate": "Apr, 2020",
-    "endDate": "Jun, 2020",
-    "experiences": [
-      "Worked on component library",
-      "Helped create UI components"
+    "programme": "Développement Digital, option Web Full-Stack",
+    "institution": "Institut Spécialisé de Formation en Offshoring (ISFO)",
+    "startDate": "2023",
+    "endDate": "En cours",
+    "details": [
+      "Étude en cours à Casablanca, Maroc",
+      "Acquisition de compétences techniques variées en développement web full-stack (voir la liste complète des compétences)"
     ],
-    "imageSrc": "history/netflix.png"
+    "location": "Casablanca, Maroc"
+  },
+  {
+    "programme": "Science Économique",
+    "institution": "Faculté des Sciences Juridiques, Économiques et Sociales (FSJES)",
+    "startDate": "2022",
+    "endDate": "2023",
+    "details": [
+      "Étudiante en sciences économiques",
+      "Formation de base avant transition vers le développement digital"
+    ],
+    "location": "Casablanca, Maroc"
+  },
+  {
+    "programme": "Baccalauréat en Sciences Mathématiques A (sm biof)",
+    "institution": "Lycée Ibno Arabi",
+    "startDate": "2021",
+    "endDate": "2022",
+    "details": [
+      "Diplôme obtenu à Casablanca, Maroc",
+      "Spécialisation en sciences mathématiques"
+    ],
+    "location": "Casablanca, Maroc"
   }
 ]
