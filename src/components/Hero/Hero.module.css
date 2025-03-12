@@ -1,3 +1,6 @@
+@import "../../vars.css";
+
+
 .container {
   display: flex;
   align-items: center;
@@ -77,12 +80,13 @@
 
 @media (max-width: 830px) {
   .container {
+      margin: 0px 5%;
     flex-direction: column-reverse;
     align-items: center;
   }
 
   .content {
     align-items: center;
-    text-align: center;
+    text-align: justify;
   }
 }
