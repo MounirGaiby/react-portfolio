@@ -3,17 +3,17 @@
 .container {
   position: relative;
   background-color: rgba(12, 12, 12, 0.6);
-  border-radius: 15px;
-  padding: 73px;
-  margin-top: 129px;
+  border-radius: 10px; /* Reduced from 15px */
+  padding: 40px; /* Reduced from 73px */
+  margin-top: 60px; /* Reduced from 129px */
   z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%; /* Reduced from 10% */
+  margin-right: 5%; /* Reduced from 10% */
 }
 
 .title {
   color: var(--color-text);
-  font-size: 35px;
+  font-size: 35px; /* Unchanged as requested */
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
@@ -26,33 +26,33 @@
 
 .aboutImage {
   width: 40%;
-  height: auto; /* or a specific height */
-  object-fit: contain; /* Keeps aspect ratio */
+  height: auto;
+  object-fit: contain;
   border-radius: 1%;
   -webkit-border-radius: 1%;
   -moz-border-radius: 1%;
   -ms-border-radius: 1%;
   -o-border-radius: 1%;
-  padding-right: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-right: 20px; /* Reduced from 30px */
+  padding-top: 20px; /* Reduced from 30px */
+  padding-bottom: 20px; /* Reduced from 30px */
 }
 
 .aboutItems {
   color: var(--color-text);
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px; /* Reduced from 50px */
 }
 
 .aboutItem {
   display: flex;
   flex-direction: row;
   align-items: start;
-  gap: 20px;
-  border-radius: 20px;
+  gap: 15px; /* Reduced from 20px */
+  border-radius: 15px; /* Reduced from 20px */
   list-style: none;
-  padding: 25px;
+  padding: 15px; /* Reduced from 25px */
   background-image: linear-gradient(
     90deg,
     rgba(165, 215, 232, 0.42) 0%,
@@ -68,35 +68,52 @@
 }
 
 .aboutItem h3 {
-  font-size: 25px;
+  font-size: 20px; /* Reduced from 25px */
   font-weight: 600;
 }
 
 .aboutItem p {
-  font-size: 25px;
+  font-size: 18px; /* Reduced from 25px */
 }
 
 @media screen and (max-width: 830px) {
   .container {
     background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 20px; /* Adjusted for mobile */
+    margin-top: 40px; /* Further reduced for mobile */
+    margin-left: 3%;
+    margin-right: 3%;
   }
 
   .content {
     flex-direction: column;
+    gap: 20px; /* Added gap for better spacing */
   }
 
   .aboutImage {
-    display: none;
+    display: block; /* Changed from none to show image */
+    width: 100%; /* Full width on mobile */
+    padding: 0; /* Remove padding */
+    margin-bottom: 20px; /* Space between image and text */
   }
 
   .aboutItems {
-    margin-top: 29px;
+    margin-top: 0; /* Removed 29px margin since image is above */
+    gap: 20px; /* Adjusted for mobile */
   }
 
   .aboutItem {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 10px; /* Adjusted for mobile */
+    flex-direction: column; /* Stack content vertically on mobile */
+    align-items: flex-start;
+    border-radius: 10px; /* Adjusted for mobile */
+  }
+
+  .aboutItem h3 {
+    font-size: 18px; /* Adjusted for mobile */
+  }
+
+  .aboutItem p {
+    font-size: 16px; /* Adjusted for mobile */
   }
 }

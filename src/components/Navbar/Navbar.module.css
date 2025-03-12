@@ -1,82 +1,128 @@
 @import "../../vars.css";
 
 .navbar {
-  position: relative;
+  position: fixed; /* Fixed to stay at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
+  padding: 20px 10%; /* Reduced padding-top from 61px */
+  background-color: rgba(10, 20, 34, 0.9); /* Semi-transparent bg using --color-bg */
+  backdrop-filter: blur(5px); /* Modern glassmorphism effect */
+  z-index: 1000; /* High z-index to stay above content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .title {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 28px; /* Slightly reduced from 30px */
+  font-weight: 700; /* Bolder for emphasis */
   text-decoration: none;
   color: var(--color-text);
+  transition: color 0.3s ease-in-out;
 }
 
-
-.menuBtn {
-  display: none;
+.title:hover {
+  color: var(--color-primary); /* Hover effect with primary color */
 }
 
 .menu {
   display: flex;
+  align-items: center;
+}
+
+.menuBtn {
+  display: none;
+  width: 30px; /* Fixed size for consistency */
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menuBtn:hover {
+  transform: scale(1.1); /* Subtle hover effect */
 }
 
 .menuItems {
   display: flex;
-  gap: 47px;
+  gap: 35px; /* Reduced from 47px */
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menuItems a {
-  font-size: 25px;
+  font-size: 20px; /* Reduced from 25px */
   color: var(--color-text);
   text-decoration: none;
+  font-weight: 500;
+  position: relative; /* For underline effect */
+  transition: color 0.3s ease-in-out;
+}
+
+.menuItems a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--color-secondary); /* Cyan underline */
+  transition: width 0.3s ease-in-out;
+}
+
+.menuItems a:hover::after {
+  width: 100%; /* Underline grows on hover */
+}
+
+.menuItems a:hover {
+  color: var(--color-secondary); /* Cyan text on hover */
 }
 
 @media screen and (max-width: 830px) {
   .navbar {
-    padding-top: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-     margin: 10px 5%;
+    padding: 15px 5%; /* Adjusted for mobile */
+    flex-direction: row; /* Keep row layout, adjust menu */
+    background-color: var(--color-bg); /* Solid bg on mobile */
+  }
+
+  .title {
+    font-size: 24px; /* Adjusted for mobile */
   }
 
   .menu {
-    position: absolute;
-    right: 0;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 11px;
-    z-index: 3;
+    position: relative; /* Adjusted from absolute */
   }
 
   .menuBtn {
     display: block;
-    cursor: pointer;
   }
 
   .menuItems {
-    display: none;
+    display: none; /* Hidden by default */
     flex-direction: column;
     align-items: center;
-    gap: 13px;
-    border-radius: 10px;
-    background: rgb(25, 55, 109);
-    padding: 24px 33px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
+    gap: 20px; /* Increased from 13px for better spacing */
+    border-radius: 12px;
+    background: var(--color-dark); /* Use dark color for dropdown */
+    padding: 20px; /* Adjusted from 24px 33px */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    position: absolute;
+    top: 50px; /* Position below navbar */
+    right: 5%;
+    width: 200px; /* Fixed width for consistency */
+  }
 
   .menuOpen {
-    display: flex;
-    z-index: 1;
+    display: flex; /* Show when open */
+  }
+
+  .menuItems a {
+    font-size: 18px; /* Adjusted for mobile */
+  }
+
+  .menuItems a::after {
+    bottom: -3px; /* Adjusted for smaller text */
   }
 }

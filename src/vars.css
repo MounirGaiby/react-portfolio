@@ -1,10 +1,11 @@
 :root {
   /* Colours */
-  --color-text: #fff;
-  --color-primary: #576cbc;
-  --color-secondary: #19376d;
-  --color-dark: #0b2447;
-  --color-bg: #04152d;
+  --color-text: #f5f7fa; /* Soft off-white for a modern, clean look */
+  --color-primary: #6b48ff; /* Vibrant purple-blue for a bold, trendy feel */
+  --color-primary-hover: #8b6bff; /* Lighter, glowing variant for hover */
+  --color-secondary: #00ddeb; /* Bright cyan for striking accents */
+  --color-dark: #1e2a3c; /* Rich slate blue for depth */
+  --color-bg: #0a1422; /* Deep midnight blue for a sleek background */
 
   /* Fonts */
   --font-roboto: "Roboto";

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
 
@@ -19,18 +18,18 @@ export const Navbar = () => {
               ? getImageUrl("nav/closeIcon.png")
               : getImageUrl("nav/menuIcon.png")
           }
-          alt="menu-button"
+          alt={menuOpen ? "close menu" : "open menu"} // Improved accessibility
           onClick={() => setMenuOpen(!menuOpen)}
         />
         <ul
-          className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
+          className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ""}`}
           onClick={() => setMenuOpen(false)}
         >
           <li>
             <a href="#about">Sur moi</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#experience">Expérience</a>
           </li>
           <li>
             <a href="#projects">Projets</a>

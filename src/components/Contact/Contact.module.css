@@ -1,10 +1,10 @@
 .container {
-  background-color: var(--color-secondary);
+  background-color: var(--color-dark); /* Changed from --color-secondary */
   color: var(--color-text);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 50px 10%;
+  padding: 40px 10%; /* Reduced from 50px for mobile */
 }
 
 .text {
@@ -12,52 +12,75 @@
 }
 
 .text h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem; /* Slightly reduced from 2rem */
   font-weight: bold;
 }
 
 .text p {
-  font-size: 1.5rem;
-  margin-top: 10px;
+  font-size: 0.9rem; /* Slightly reduced from 1rem */
+  margin-top: 8px; /* Reduced from 10px */
 }
 
 .links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 15px; /* Reduced from 20px */
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 15px;
-  transition: transform 0.2s ease-in-out;
+  gap: 12px; /* Reduced from 15px */
+  transition: all 0.2s ease-in-out; /* Added 'all' for smoother transitions */
 }
 
 .link:hover {
   transform: scale(1.05);
+  color: var(--color-secondary); /* Use secondary color on hover */
 }
 
 .link img {
-  width: 30px;
+  width: 18px; /* Slightly reduced from 20px */
 }
 
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
+  transition: color 0.2s ease-in-out; /* Added transition for color change */
+}
+
+.link:hover a {
+  color: var(--color-secondary); /* Ensure link text changes color on hover */
 }
 
 @media (max-width: 830px) {
   .container {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
+    gap: 25px; /* Reduced from 30px */
+    padding: 30px 5%; /* Adjusted for mobile */
   }
 
   .links {
-    align-items: center;
+    align-items: center; /* Changed to center for mobile consistency */
+  }
+  
+  .text h2 {
+    font-size: 1.5rem; /* Adjusted for mobile */
+  }
+
+  .text p {
+    font-size: 0.85rem; /* Adjusted for mobile */
+  }
+
+  .link a {
+    font-size: 0.8rem;
+  }
+
+  .link img {
+    width: 16px; /* Adjusted for mobile */
   }
 }

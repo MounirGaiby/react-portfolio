@@ -1,11 +1,11 @@
 @import "../../vars.css";
 
-
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 50px 10%;
+  margin: 30px 10%; /* Reduced from 50px */
+  margin-top: 100px; /* Added for better spacing */
   position: relative;
 }
 
@@ -17,19 +17,19 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 3rem; /* Unchanged as requested */
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced from 20px */
   font-family: var(--font-roboto);
-  background: linear-gradient(90deg, #fff 70%, rgba(255, 255, 255, 0) 120%);
+  background: linear-gradient(90deg, var(--color-text) 70%, rgba(255, 255, 255, 0) 120%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reduced from 1.5rem */
   font-family: var(--font-roboto);
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Reduced from 30px */
 }
 
 .contactBtn {
@@ -37,15 +37,19 @@
   background-color: var(--color-primary);
   color: var(--color-text);
   border-radius: 50px;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduced from 1.2rem */
   font-weight: 600;
-  padding: 15px 25px;
-  margin-right: 10px;
-  transition: 0.3s ease-in-out;
+  padding: 12px 20px; /* Reduced from 15px 25px */
+  margin-right: 8px; /* Reduced from 10px */
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--color-primary); /* Added for better definition */
 }
 
 .contactBtn:hover {
   background-color: var(--color-primary-hover);
+  color: var(--color-bg); /* Better contrast on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added shadow */
 }
 
 .imageWrapper {
@@ -57,8 +61,8 @@
 .heroImg {
   width: 100%;
   border-radius: 50%;
-  max-width: 450px;
-  padding: 60px;
+  max-width: 300px; /* Reduced from 450px */
+  padding: 40px; /* Reduced from 60px */
   animation: floating 3s infinite ease-in-out;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -66,28 +70,51 @@
   -o-border-radius: 50%;
 }
 
-
 .buttonsContainer {
-  display: "flex";
-  flex-direction: "row";
-  gap: 20px;
+  display: flex; /* Fixed quotes */
+  flex-direction: row; /* Fixed quotes */
+  gap: 15px; /* Reduced from 20px */
 }
 
 @keyframes floating {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
+  50% { transform: translateY(8px); } /* Reduced from 10px */
 }
 
 @media (max-width: 830px) {
   .container {
-      margin: 0px 5%;
+    margin: 20px 5%; /* Adjusted for mobile */
     flex-direction: column-reverse;
     align-items: center;
-    margin: 10px 10%;
+    margin-top: 100px;
   }
 
   .content {
     align-items: center;
-    text-align: justify;
+    text-align: center; /* Changed to center for mobile readability */
+  }
+
+  .title {
+    font-size: 3rem; /* Kept as requested */
+  }
+
+  .description {
+    font-size: 1rem; /* Further reduced for mobile */
+  }
+
+  .contactBtn {
+    padding: 10px 18px; /* Adjusted for mobile */
+    font-size: 0.9rem; /* Adjusted for mobile */
+  }
+
+  .heroImg {
+    max-width: 200px; /* Further reduced for mobile */
+    padding: 20px; /* Adjusted for mobile */
+  }
+
+  .buttonsContainer {
+    flex-direction: column; /* Stack buttons on mobile */
+    gap: 10px; /* Adjusted for mobile */
+    width: 100%; /* Full width for better spacing */
   }
 }
